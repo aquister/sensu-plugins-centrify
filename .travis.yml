@@ -5,6 +5,10 @@ rvm:
   - 2.3.0
 before_install:
   - gem update bundler
-notifications:
-  irc:
-    - "irc.freenode.net#sensu"
+deploy:
+  provider: rubygems
+  gem: sensu-plugins-centrify
+  on:
+    tags: true
+  api_key:
+    secure: p555G3FzhZHdUwXOwBgFDmB68RumtHNG7CuRrmeCuGU2W9Ehv+iEyf7E88aC3z/l6x6O04oJdzSoH4SX5C5KeM7cAtwFfyj1OUDNlCEpWlizmoqfU8W/RLnEGwoc0UYwqfTTe6Plsa3Y5UxBjDHwWPc5P4PX7xkL3mTCyZD9j1Zennu6y+6liRJY4SAa0K217us8FPgJDBo98qMdw1KbnOdEXDaxLXMWTUOe4BjIXeNln/IEKk//yZbMQLHMXXdPhXkhRThBYQx7ELmif7m/GdgLre+BJdGOTekFxlDk6alv0dJxfaAK7eN3iKPtcTCJ8jG3XjC4PDaBhSaTODs+hVP/z9KrJEvsgRTktual5nE26dbHvGM7Kjib/PnTa9hNT/lO4c+rTMIxGJmxy3jHMMvACjP4oAJCN2yJlaxhjSDEsTSxR5uGyKPgx0Q1RX1cX50kE4tclHzSqBs69wWYjeoXnCPJmjI0I4mDE6dHklk9EL3YBVkqALRhER9ixqGvN+htQFSLs6bz8WpQVD2p2aHCAT/X5uVSm5jsKtFqsP9ED7zTeX7ho6eF1QWdTKJE/emHAEwvN+gRv90jU2mpXqp8Sr3+cMftg/sSMkrstbO/ZzW1Xi4q/aXIEPMvzDLpF+0tQiBOHlHxVec5QDM6oS/kY3kYQYd4wOnEPUYiGLM=
