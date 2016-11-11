@@ -14,7 +14,7 @@ class UsersVoidHomedirs < Sensu::Plugin::Check::CLI
   def run
     void_users = []
     Dir.foreach(config[:path]) do |user|
-      next if user == '.' || user == '..'
+      next if user == '.' || user == '..' || user == 'lost+found'
       begin
         Etc.getpwnam(user)
       rescue
