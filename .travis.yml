@@ -3,8 +3,13 @@ rvm:
   - 2.1
   - 2.2
   - 2.3.0
+  - 2.4.1
 before_install:
   - gem update bundler
+script:
+  - bundle exec rake default
+  - gem build sensu-plugins-centrify.gemspec
+  - gem install sensu-plugins-centrify-*.gem
 deploy:
   provider: rubygems
   gem: sensu-plugins-centrify
